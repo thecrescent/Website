@@ -26,14 +26,25 @@
 			color: rgb(166,146,117);<!--Gold-->
 		}
 		body{
-			margin: 40px 0;
+			margin: 5px 0;
+			
+		.w3-row-padding img {margin-bottom: 12px}
+		/* Set the width of the sidebar to 120px */
+
+		.w3-sidebar {width: 120px;background: rgb(166,146,117);}
+		/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
+		#main {margin-left: 120px}
+		/* Remove margins from "page content" on small screens */
+
+		@media only screen and (max-width: 600px) {#main {margin-left: 0}}			
 		}
 		.maintext{
 			color: white;
 		}
 		
 		
-		.fa {
+		.faf {
   			padding: 20px;
   			font-size: 30px;
 			height: 68px;
@@ -71,12 +82,47 @@
 	<meta name="HandheldFriendly" content="True">
   	<meta name="MobileOptimized" content="320">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-	<link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="crescentlogo.png" type="image/x-icon">
 </head>
 <body>
 	
 	
-	
+		  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="color:rgb(16, 41, 75)">
+	  <!-- Avatar image in top left corner -->
+	  <img src="crescentlogo.png" style="width:100%; background-color:rgb(16, 41, 75);">
+	  <a href="beta.html" class="w3-bar-item w3-button w3-padding-large">
+	    <i class="fa fa-home w3-xxlarge"></i>
+	    <p>Beta</p>
+	  </a>
+	  <a href="beta2.html" class="w3-bar-item w3-button w3-padding-large">
+	    <i class="fa fa-user w3-xxlarge"></i>
+	    <p>Beta2</p>
+	  </a>
+	  <a href="beta3.html" class="w3-bar-item w3-button w3-padding-large">
+	    <i class="fa fa-eye w3-xxlarge"></i>
+	    <p>Beta3</p>
+	  </a>
+	  <a href="beta4.html" class="w3-bar-item w3-button w3-padding-large">
+	    <i class="fa fa-envelope w3-xxlarge"></i>
+	    <p>Beta4</p>
+	  </a>
+	</nav>
+
+
+
+	  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+	  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+	    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+	      <a href="beta.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+	      <a href="beta2.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+	      <a href="beta3.html" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+	      <a href="beta4.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+	    </div>
+	  </div>
+
+	  <div class="w3-padding-large" id="main">
+
 
 
 
@@ -92,99 +138,15 @@
 
 
 
-		<!--<div class="content info w3-center" >
-			<div class="buttons">
-				<p>
-					<a href="" data-modal="#modal" class="modal__trigger">About Us</a>
-					<a href="" data-modal="#modal2" class="modal__trigger">Facilities</a>
-					<a href="" data-modal="#modal3" class="modal__trigger">Reviews</a>
-					<a href="" data-modal="#modal4" class="modal__trigger">Gallery</a>
-				</p>
-			</div>
-		
-		</div>-->
-
-
-
-	<!-- Modal -->
-	<div id="modal" class="modal modal__bg" role="dialog" aria-hidden="true" >
-		<div class="modal__dialog">
-			<div class="modal__content">
-				<h1>Modal</h1>
-				<p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi. Normcore chambray locavore Banksy, YOLO meditation master cleanse readymade Bushwick.</p>
-				
-				<!-- modal close button -->
-				<a href="" class="modal__close demo-close">
-					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-				</a>
-				
-			</div>
-		</div>
-	</div>
-
-	<div id="modal2" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true"">
-		<div class="modal__dialog">
-			<div class="modal__content">
-				<h1>Big Modal</h1>
-				<h3>This modal is pretty tall.</h3>
-				<p>Selfies normcore four dollar toast four loko listicle artisan. Hoodie Marfa authentic, wayfarers church-key tofu Banksy pop-up Kickstarter Brooklyn heirloom swag synth. Echo Park cray synth mixtape. Tofu gastropub squid readymade, trust fund Wes Anderson DIY PBR 8-bit try-hard +1 Shoreditch lo-fi tote bag.</p>
-				<p><img src="http://unsplash.it/600/300" alt="" /></p>
-				<p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice blog. Cred meh yr tofu.</p>
-				<p>Mumblecore cred selfies fingerstache. Tousled skateboard plaid lo-fi shabby chic salvia, swag Odd Future Etsy art party Austin cronut. Crucifix whatever Pinterest food truck, pickled viral cray 90's DIY chambray keffiyeh biodiesel Vice blog. Cred meh yr tofu.</p>
-				<!-- modal close button -->
-				<a href="" class="modal__close demo-close">
-					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-				</a>
-			</div>
-		</div>
-	</div>
-
-	<div id="modal3" class="modal modal__bg" role="dialog" aria-hidden="true"">
-		<div class="modal__dialog">
-			<div class="modal__content">
-				<h1>Modal 3</h1>
-				<p>Church-key American Apparel trust fund, cardigan mlkshk small batch Godard mustache pickled bespoke meh seitan. Wes Anderson farm-to-table vegan, kitsch Carles 8-bit gastropub paleo YOLO jean shorts health goth lo-fi.</p>
-				
-				<!-- modal close button -->
-				<a href="" class="modal__close demo-close">
-					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div id="modal4" class="modal modal__bg" role="dialog" aria-hidden="true"">
-		<div class="modal__dialog4">
-			<div class="modal__content">
-				<h1>Modal 4</h1>
-					<div align="center">
-						<div class="instapic">
-							<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BXctHvrDrTR/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Lovely set up by @theeminenceway for a wedding #weddingvenue #wedding #aisledecor #aislestyle #northwestweddings #bolton #redcarpet #bride #groom</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by The Crescent (@thecrescentbolton) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-08-06T10:11:19+00:00">Aug 6, 2017 at 3:11am PDT</time></p></div></blockquote>
-							<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-						</div>	
-						<div class="instapic">
-							<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BXHUvjfD_wq/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">@thecrescentbolton getting ready for wedding season with @theeminenceway</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by The Crescent (@thecrescentbolton) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-07-29T02:54:15+00:00">Jul 28, 2017 at 7:54pm PDT</time></p></div></blockquote>
-							<script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
-						</div>	
-					</div>
-				<!-- modal close button -->
-				<a href="" class="modal__close demo-close">
-					<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"/><path d="M0 0h24v24h-24z" fill="none"/></svg>
-				</a>
-			</div>
-		</div>
-	</div>
-
 <div class="box maintext">
 	<p style="font-size: 18px"><i class="material-icons" style="font-size:26px;color:rgb(166,146,117)">business</i> Crescent House Bolton</p>
 	<p style="font-size: 18px"><i class="material-icons" style="font-size:26px;color:rgb(166,146,117)">place</i> Bl3 6NN</p>
 	<p style="font-size: 20px"><i class="material-icons" style="font-size:26px;color:rgb(166,146,117)">stay_current_portrait</i> 07716 582490</p>
 	<p style="font-size: 20px"><i class="material-icons" style="font-size:26px;color:rgb(166,146,117)">phone</i> 01204 487467</p>
 	<div class="w3-center">
-		<a class="fa fa-instagram" href="https://www.instagram.com/thecrescentbolton/?hl=en" target="_blank"></a>
-		<a class="fa fa-snapchat"  href="https://www.snapchat.com/add/crescentbolton" target="_blank"></a>	
-		<a class="fa fa-facebook"  href="https://www.facebook.com/crescent.house.5" target="_blank"></a>	
+		<a class="faf fa fa-instagram" href="https://www.instagram.com/thecrescentbolton/?hl=en" target="_blank"></a>
+		<a class="faf fa fa-snapchat"  href="https://www.snapchat.com/add/crescentbolton" target="_blank"></a>	
+		<a class="faf fa fa-facebook"  href="https://www.facebook.com/crescent.house.5" target="_blank"></a>	
 
 
 
@@ -216,15 +178,10 @@
 	<br><br>
 </div>
 
-<!--
-<div class="content">
-	<p style="font-size: 45px" class="w3-center maintext"><strong>Website Coming Soon !!</strong></p>
-</div>
--->
+
 
 <footer class="maintext">
 	<p class="w3-center">Made By ZFB Indsustries</p>
 </footer>
-<script src="modaljs.js" ></script>	
 </body>
 </html>
